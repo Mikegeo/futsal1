@@ -24,3 +24,4 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/profile/{name}', 'UserProfileController@profile');
+Route::resource('events', 'EventController');
