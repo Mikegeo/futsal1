@@ -11,7 +11,9 @@
     <title>{{ config('app.name', 'MyFutsal') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
 
     <!-- Scripts -->
     <script>
@@ -69,6 +71,11 @@
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
+
+                                        <a href="{{ url('/events/index') }}">Book a field.</a>
+
+                                        </form>
+
                                     </li>
                                 </ul>
                             </li>
@@ -82,6 +89,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+ 	<script src="{{ url('_asset/fullcalendar/lib') }}/moment.min.js"></script>
+
+	@yield('js')
 </body>
 </html>
