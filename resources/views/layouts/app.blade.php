@@ -13,7 +13,9 @@
     <!-- Styles -->
 
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+     <link href="{{ url('_asset/css') }}/style.css" rel="stylesheet">
+    	<link href="{{ url('_asset/css') }}/daterangepicker.css" rel="stylesheet">
+    	<link href="{{ url('_asset/fullcalendar') }}/fullcalendar.min.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
