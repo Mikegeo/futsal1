@@ -64,6 +64,10 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
+                                      <a href="{{ url('/profile/{name}') }}">Profile</a>
+                                      <a href="{{ url('/events') }}">Booking List</a>
+                                      <a href="{{ url('events/create') }}">Book a field</a>
+
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -74,8 +78,7 @@
                                             {{ csrf_field() }}
                                         </form>
 
-                                        <a href="{{ url('/events') }}">Booking List</a>
-                                        <a href="{{ url('events/create') }}">Book a field</a></li>
+                                        </li>
 
                                         </form>
 
