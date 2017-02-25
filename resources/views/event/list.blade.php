@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts')
 
 @section('content')
 
@@ -34,13 +34,13 @@
 					<td>{{date("g:ia\, jS M Y", strtotime($event->end_time)) }}</td>
 					<td>
 						<a class="btn btn-primary btn-xs" href="{{ url('events/' . $event->id . '/edit')}}">
-							<span class="glyphicon glyphicon-edit"></span> Edit</a> 
+							<span class="glyphicon glyphicon-edit"></span> Edit</a>
 						<form action="{{ url('events/' . $event->id) }}" style="display:inline" method="POST">
 							<input type="hidden" name="_method" value="DELETE" />
 							{{ csrf_field() }}
 							<button class="btn btn-danger btn-xs" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button>
 						</form>
-						
+
 					</td>
 				</tr>
 			@endforeach

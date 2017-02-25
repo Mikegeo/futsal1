@@ -74,7 +74,8 @@
                                             {{ csrf_field() }}
                                         </form>
 
-                                        <a href="{{ url('/events/index') }}">Book a field.</a>
+                                        <a href="{{ url('/events') }}">Booking List</a>
+                                        <a href="{{ url('events/create') }}">Book a field</a></li>
 
                                         </form>
 

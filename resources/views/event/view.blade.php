@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts')
 
 @section('content')
 
@@ -21,15 +21,15 @@
 
 <div class="row">
 	<div class="col-lg-6">
-		
+
 		<p>Time: <br>
 		{{ date("g:ia\, jS M Y", strtotime($event->start_time)) . ' until ' . date("g:ia\, jS M Y", strtotime($event->end_time)) }}
 		</p>
-		
+
 		<p>Duration: <br>
 		{{ $duration }}
 		</p>
-		
+
 		<p>
 			<form action="{{ url('events/' . $event->id) }}" style="display:inline;" method="POST">
 				<input type="hidden" name="_method" value="DELETE" />
@@ -37,10 +37,10 @@
 				<button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button>
 			</form>
 			<a class="btn btn-primary" href="{{ url('events/' . $event->id . '/edit')}}">
-				<span class="glyphicon glyphicon-edit"></span> Edit</a> 
-			
+				<span class="glyphicon glyphicon-edit"></span> Edit</a>
+
 		</p>
-		
+
 	</div>
 </div>
 @endsection
