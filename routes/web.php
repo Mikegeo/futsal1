@@ -24,4 +24,15 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/profile/{name}', 'UserProfileController@profile');
+
 Route::resource('events', 'EventController');
+
+Route::get('/api', function () {
+	$events = DB::table('events')->select('id', 'name', 'title', 'start_time as start', 'end_time as end')->get();
+	foreach($events as $event)
+	{
+		$event->title = $event->title . ' - ' .$event->name;
+		$event->url = url('events/' . $event->id);
+	}
+	return $events;
+});
